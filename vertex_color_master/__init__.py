@@ -42,7 +42,7 @@ bl_info = {
     "location": "Vertex Paint | View3D > VCM",
     "description": "Tools for manipulating vertex color data.",
     "warning": "",
-    "doc_url": "https://github.com/andyp123/blender_vertex_color_master",
+    "wiki_url": "https://github.com/andyp123/blender_vertex_color_master",
     "tracker_url": "https://github.com/andyp123/blender_vertex_color_master/issues",
     "category": "Paint",
 }
@@ -116,9 +116,13 @@ def unregister():
     # unregister shortcuts
     wm = bpy.context.window_manager
     if wm.keyconfigs.addon:
-        for km, kmi in addon_keymaps:
-            km.keymap_items.remove(kmi)
-        addon_keymaps.clear()
+        for km in addon_keymaps:
+            for kmi in km.keymap_items:
+                km.keymap_items.remove(kmi)
+
+            wm.keyconfigs.addon.keymaps.remove(km)
+
+    del addon_keymaps[:]
 
 # allows running addon from text editor
 if __name__ == '__main__':

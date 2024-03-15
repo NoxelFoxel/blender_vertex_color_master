@@ -1,6 +1,6 @@
 # Vertex Color Master for Blender
 
-> __Warning:__ This addon does not work well from Blender 3.2 upwards due to internal changes in vertex attributes in Blender. I have tried to fix the problems, but have not been able to yet. I may return to the addon in the future in order to fix the bugs or even rewrite it, but I can't make any guarantees due to other commitments. Apologies to anyone who uses the addon and is waiting for a fix.
+> Fixed for Blender 4.0
 
 An add-on for [Blender](https://www.blender.org/) that adds numerous features to assist working with vertex colors.
 

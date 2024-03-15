@@ -69,8 +69,8 @@ class VERTEXCOLORMASTER_OT_Gradient(bpy.types.Operator):
 
     _handle = None
 
-    line_shader = gpu.shader.from_builtin('2D_SMOOTH_COLOR')
-    circle_shader = gpu.shader.from_builtin('2D_UNIFORM_COLOR')
+    line_shader = gpu.shader.from_builtin('SMOOTH_COLOR')
+    circle_shader = gpu.shader.from_builtin('UNIFORM_COLOR')
 
     start_color: FloatVectorProperty(
         name="Start Color",
@@ -880,8 +880,7 @@ class VERTEXCOLORMASTER_OT_BlendChannels(bpy.types.Operator):
         return bpy.context.object.mode == 'VERTEX_PAINT' and obj is not None and obj.type == 'MESH'
 
     def invoke(self, context, event):
-        settings = context.scene.vertex_color_master_settings
-        self.result_channel_id = settings.dst_channel_id
+        self.result_channel = settings.dst_channel_id
         return self.execute(context)
 
     def execute(self, context):
