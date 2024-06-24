@@ -16,8 +16,8 @@ An add-on for [Blender](https://www.blender.org/) that adds numerous features to
 
 <a name="installation"></a>
 ## Installation
-__Note:__ This add-on requires [Blender 2.80](https://builder.blender.org/download/) or above. There is an older release compatible with Blender 2.79 available [here](https://github.com/andyp123/blender_vertex_color_master/releases/tag/v0.75).
-1. Download the latest release from GitHub [here](https://github.com/andyp123/blender_vertex_color_master/releases).
+__Note:__ This add-on requires [Blender 4.0](https://builder.blender.org/download/) or above. There is an older release compatible with Blender 2.79 available [here](https://github.com/andyp123/blender_vertex_color_master/releases/tag/v0.75).
+1. Download the latest release from GitHub [here](https://github.com/NoxelFoxel/blender_vertex_color_master/releases/tag/fix).
 2. In Blender, open the Preferences window (Edit>Preferences) and select the Add-ons tab.
 3. Press the 'Install...' button and select the .zip file you downloaded.
 4. Enable the add-on and save preferences if you want it to always be available.
